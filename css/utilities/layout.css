@@ -1,0 +1,22 @@
+/* layout.css */
+a.topic-title{
+    display: inline-flex;
+}
+.topics-container {
+    display: flex;
+    flex-direction: column;
+}
+.sub-topics-container {
+    display: flex;
+    
+}
+.project {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-content: center;
+}
+
+.project > img{
+    justify-self: flex-end;
+}

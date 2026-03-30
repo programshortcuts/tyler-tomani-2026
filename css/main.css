@@ -1,0 +1,16 @@
+/* main.css */
+@import url('imgs.css');
+/* uis */
+@import url('ui/drop-downs.css');
+/* utilties */
+@import url('utilities/borders.css');
+@import url('utilities/display.css');
+@import url('utilities/layout.css');
+@import url('utilities/sizing.css');
+@import url('utilities/spacing.css');
+@import url('utilities/text.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

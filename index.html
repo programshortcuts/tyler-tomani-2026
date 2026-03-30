@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tyler-tomani-2026</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main-script.js" defer></script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -11,13 +13,53 @@
             <h1>tyler-tomani-2026</h1>
         </header>
         <div class="main-container">
-            <div class="projects-container">
-                <div class="project">
-                    <h2><a target="_blank" href="https://programshortcuts.com/">programshortcuts.com</a></h2>
+            <div class="topics-container">
+                <!-- Websites -->
+                <div class="topic drop-parent">
+                    <!-- rel="noopener norefferer" is for SECURITY!! -->
+                    <!-- 👉 rel="noopener noreferrer" does nothing without target="_blank" -->
+                    <!-- <a href="#" class="topic-title drop-down" rel="noopener noreferrer"><h2>websites</h2></a> -->
+                    <a href="#" class="topic-title drop-down" ><h2>websites</h2></a>
+                    <div class="sub-topics-container downs">
+                        <!-- program shortcuts -->
+                        <!-- rel="noopener norefferer" is for SECURITY!! -->
+                        <a class="project" target="_blank"  
+                            href="https://programshortcuts.com/" 
+                            rel="noopener noreferrer">
+                                <h3 class="project-title">program shortcuts</h3>
+                                <img 
+                                    src="images/program-shorcut-logo.png" 
+                                    alt="Program Shortcuts Logo">
+                        </a>
+                        <!-- code commands & shortcuts -->
+                         <!-- rel="noopener norefferer" is for SECURITY!! -->
+                        <a class="project" target="_blank" 
+                            href="" 
+                            rel="noopener noreferrer">
+                                <h3 class="project-title">code commands & shortcuts</h3>
+                                <img 
+                                    src="images/codeCmdShorts-logo.png" 
+                                    alt="Code Commands and Shortcuts Logo">
+                        </a>
+                    </div>
+                </div>
+                <!-- Projects -->
+                <div class="topic drop-parent">
+                    <a href="#" class="topic-title drop-down"><h2>projects</h2></a>
+                    <div class="sub-topics-container downs">
+                        <!-- rel="noopener norefferer" is for SECURITY!! -->
+                        <a class="project" target="_blank" 
+                            href="" 
+                            rel="noopener noreferrer">
+                                <h3 class="project-title">pops-invoice</h3>
+                                <img 
+                                    src="images/pops-invoice.jpg" 
+                                    alt="pops invoice Logo">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
 </body>
 </html>

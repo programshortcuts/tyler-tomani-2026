@@ -1,0 +1,10 @@
+/* display.css */
+.project  {
+    display: inline-flex;
+}
+.project >img {
+    display: inline-flex;   
+}
+.hide {
+    display: none !important;
+}

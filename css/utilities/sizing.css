@@ -1,0 +1,19 @@
+/* sizing.css */
+.topic{
+    max-height: 25vh;
+}
+.topic-title{
+    width: 80%;
+}
+.project  {
+    height: 20vh;
+    width: 20vh;
+}
+.project > h3{
+    min-height: 5vh;
+}
+.project img {
+    /* max-height: 30px; */
+    width: 100%;
+    height: 100%;
+}

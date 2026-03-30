@@ -1,0 +1,16 @@
+/* borders.css */
+.sub-topics-container{
+}
+.topic{
+    border-left: 2px solid black;
+}
+.topic-title {
+    border-top: 2px solid black;
+}
+.project  {
+    border: 1px solid blue;
+    border-radius: 18px;
+}
+.project img { 
+    border-radius: 18px;
+}
