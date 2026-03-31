@@ -1,5 +1,6 @@
 /* main.css */
 @import url('imgs.css');
+@import url('responsive.css');
 /* uis */
 @import url('ui/drop-downs.css');
 /* utilties */

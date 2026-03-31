@@ -1,11 +1,17 @@
+// letter-nav.js
 export function initLetterNav({
     container = document,
     selector = 'a'
 } = {}) {
 
+    if (!container) {
+        console.warn('initLetterNav: container not found');
+        return;
+    }
+
     let lastLetterPressed = null;
 
-    container.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', (e) => {
 
         // Ignore typing fields
         const tag = e.target.tagName;
@@ -18,17 +24,17 @@ export function initLetterNav({
         // Only letters & numbers
         if (key.length !== 1 || !/^[a-z0-9]$/.test(key)) return;
 
+        // 🔑 Only look INSIDE your container
         const allEls = [...container.querySelectorAll(selector)].filter(el => {
             const rect = el.getBoundingClientRect();
             return el.offsetParent !== null && rect.width > 0 && rect.height > 0;
         });
 
-        const matches = allEls.filter(el => {
-            const text = el.textContent.trim().toLowerCase();
-            return text.startsWith(key);
-        });
+        const matches = allEls.filter(el =>
+            el.textContent.trim().toLowerCase().startsWith(key)
+        );
 
-        if (matches.length === 0) return;
+        if (!matches.length) return;
 
         const active = document.activeElement;
         const currentIndex = matches.indexOf(active);
@@ -36,14 +42,9 @@ export function initLetterNav({
 
         let nextEl;
 
-        if (key !== lastLetterPressed) {
-            if (e.shiftKey) {
-                nextEl = [...matches].reverse().find(el => allEls.indexOf(el) < allIndex)
-                    || matches[matches.length - 1];
-            } else {
-                nextEl = matches.find(el => allEls.indexOf(el) > allIndex)
-                    || matches[0];
-            }
+        if (key !== lastLetterPressed || currentIndex === -1) {
+            // 🔥 if nothing is focused yet → always start at first match
+            nextEl = matches[0];
         } else {
             if (e.shiftKey) {
                 const i = (currentIndex - 1 + matches.length) % matches.length;

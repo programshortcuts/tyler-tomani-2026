@@ -1,0 +1,6 @@
+@media screen and (min-height:720px){
+    .project  {
+        height: 15vh !important;
+        width:  15vh !important;
+    }
+}
