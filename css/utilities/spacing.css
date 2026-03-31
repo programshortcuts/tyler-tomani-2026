@@ -1,25 +1,50 @@
-/* spacing.css */
-.page-wrapper {
-    margin: 0 2%;
+body {
+    margin: 0 1%;
 }
-.main-container{
-    padding-left: 2%;
-    padding-top: 4%;
+#aiToolsTopicsContainer{
+    margin-left: 2%;
+    width: 80%;
 }
-.topic {
-    margin-bottom: 2%;
+main {
+    margin: 1% 0;
+    padding-bottom: 20%;
 }
-.sub-topics-container{
-    padding-left: 2%;
-    margin-bottom: 4%;
 
+main>.topic {
+    margin: 1%;
 }
-.topic-title{
-    margin-bottom: 2%;
+a.drop-topic {
+    padding: 0;
+    padding-left: 2%;
+}
+.topics-container>.sub-topic {
+    margin: .5% 0;
+}
+.topics-container>.project {
+    margin: .5% .5%
+}
+.topic>.topics-container>.topic {
+    margin: 1%;
+}
+.drop-sub-topic {
+    padding-left: 2.5%;
+}
+.sub-topic-container>.project {
+    margin: 1.5% 1.5%;
+    margin-left: 2.5%;
+    padding-left: 2.5%;
+}
+#youtubeResourcesSection>.topics-container {
+    margin-top: 2.5%;
+}
+
+#youtubeResourcesSection>.topics-container .project {
+    height: 8vh;
+    padding-top: 1%;
     padding-left: 1%;
-    /* padding-top: 1%; */
+    
 }
-.project {
-    padding: 0 1%;
-    padding-top: 1%;   
+#aiYoutube {
+    padding-top: 2% !important;
+    padding-left: 2% !important;    
 }

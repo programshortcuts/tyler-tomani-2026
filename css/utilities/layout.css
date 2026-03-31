@@ -1,22 +1,44 @@
-/* layout.css */
-a.topic-title{
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+.topic>a.drop-topic,
+.drop-sub-topic {
     display: inline-flex;
 }
+
 .topics-container {
     display: flex;
-    flex-direction: column;
-}
-.sub-topics-container {
-    display: flex;
-    
-}
-.project {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-content: center;
+    flex-wrap: wrap;
 }
 
-.project > img{
-    justify-self: flex-end;
+.topics-container>.sub-topic {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topic>.topics-container>.topic {
+    display: flex;
+    flex-basis: 49%;
+    flex-direction: column;
+}
+.topics-container>.project {
+    display: flex;
+    flex-basis: 15%;
+    flex-direction: column;
+}
+
+.sub-topic-container>.project {
+    display: flex;
+    flex-basis: 15%;
+    flex-direction: column;
+}
+#youtubeResourcesSection>.topics-container .project {
+    flex-basis: 20%;
 }

@@ -1,16 +1,26 @@
-/* borders.css */
-.sub-topics-container{
+
+a.drop-topic {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
 }
-.topic{
-    border-left: 2px solid black;
+.topics-container>.project {
+    border: 1px solid black;
 }
-.topic-title {
-    border-top: 2px solid black;
+.drop-sub-topic {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
 }
-.project  {
-    border: 1px solid blue;
-    border-radius: 18px;
+.js-b{border: 2px solid darkkhaki !important;}
+.docker-b{border: 2px solid darkslateblue !important;}
+.freecodecamp-b{border: 2px solid green !important;}
+.nodeJs-b { border: 2px solid royalblue !important;}
+.dark-mode .nodeJs-b { border: 2px solid royalblue !important;}
+.python-b {border: 2px solid mediumpurple !important;}
+
+#aiYoutube{
+    border: 1px solid orangered;
 }
-.project img { 
-    border-radius: 18px;
+.project {
+    border-radius: 4px;
 }
