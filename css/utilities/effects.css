@@ -1,3 +1,4 @@
+/* effects.css */
 :root {
     --x: 1px;
     --xB: 2px;
@@ -18,13 +19,7 @@
     font-weight: 999;
     font-size: 150%;
 }
-.project:focus,
-.project:active {
-    outline: none;
-    margin-top: 2px !important;
-    margin-left: 2px !important;
-    transition: all .2s;   
-}
+
 .nodeJs-b:focus,
 .nodeJs-b:active {
     box-shadow: var(--x) 0 var(--xB) var(--yB) royalblue !important;
@@ -75,3 +70,21 @@
     border: 10px;
 }
 .js-b:hover {box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;}
+
+.project {
+    transition: background-color 0.25s linear, opacity 0.25s linear;
+}
+.project:focus,
+.project:active {
+    outline: none;
+    margin-top: 2px !important;
+    margin-left: 2px !important;
+    transition: all .2s;   
+}
+.project:hover{
+    padding-top: 1% !important;
+    padding-left: 1% !important;
+    margin-left:1% !important;
+    margin-bottom:1% !important;
+    transition: all(500ms) !important;
+}

@@ -5,3 +5,9 @@
     bottom: 10%;
     left: 0;
 }
+#youtubeResource >  .topics-container{
+    position: relative;
+}
+#youtubeResource >  .topics-container .projcet{
+    position: absolute;
+}
