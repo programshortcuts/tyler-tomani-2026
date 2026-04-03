@@ -7,5 +7,10 @@ a.drop-topic {
     height: 90%;
 }
 .project img {
-    min-height: ;
+    min-height: 150px;
+}
+#youtubeResources>.topics-container .project {
+    height: 16vh ;
+    
+    width:  20vw ;
 }

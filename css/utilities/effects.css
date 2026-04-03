@@ -4,78 +4,77 @@
     --xB: 2px;
     --yB: 2px;
 }
-.ai-b:focus h3,
-.ai-b:active h3,
-.ai-b:hover h3,
-.js-b:focus h3,
-.js-b:active h3,
-.js-b:hover h3,
-.python-b:focus h3,
-.python-b:active h3,
-.python-b:hover h3 {
-    color: whitesmoke;
-    text-shadow: -1px 1px 3px black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 999;
-    font-size: 150%;
+#aiYoutube:focus,
+#aiYoutube:active {
+    box-shadow: var(--x) 0 var(--xB) var(--yB) orangered !important;
+    background-color: rgb(255, 69, 0,.4);
 }
-
-.nodeJs-b:focus,
-.nodeJs-b:active {
-    box-shadow: var(--x) 0 var(--xB) var(--yB) royalblue !important;
-    border: 2px solid royalblue !important;
+#cssYoutube{
+    box-shadow: var(--x) 0 var(--xB) var(--yB) rgb(78, 74, 106) !important;
+    border: 2px solid rgb(143, 141, 159) !important;
 }
-.docker-b:focus,
-.docker-b:active {
+#cssYoutube:focus,
+#cssYoutube:active {
+    background-color: rgb(143, 141, 159) !important;
+}
+#dockerYoutube:focus,
+#dockerYoutube:active {
     box-shadow: var(--x) 0 var(--xB) var(--yB) darkslateblue !important;
     border: 2px solid darkslateblue !important;
+    background-color: rgb(72, 61, 139) !important;
+}
+#freecodecampYoutube:focus,
+#freecodecampYoutube:active {
+    box-shadow: var(--x) 0 var(--xB) var(--yB) green !important;
+    border: 2px solid green !important;
+    background-color: rgb(31, 81, 31) !important;
 }
 
-.python-b:focus,
-.python-b:active {
+#nodeJsYoutube:focus,
+#nodeJsYoutube:active {
+    box-shadow: var(--x) 0 var(--xB) var(--yB) royalblue !important;
+    border: 2px solid royalblue !important;
+    background-color: rgb(32, 55, 122);
+}
+#pythonYoutube:focus,
+#pythonYoutube:active {
     background-color: rgb(147, 112, 216, .4);
     border: 10px;
     font-size: 1.3rem;
 }
-.python-b:hover{
+#pythonYoutube:hover{
     box-shadow: var(--x) 0 var(--xB) var(--yB) mediumpurple !important;
-    border: 1px solid black;
 }
-.ai-b:focus,
-.ai-b:active {
-    box-shadow: var(--x) 0 var(--xB) var(--yB) orangered !important;
-    background-color: rgb(255, 69, 0,.4);
-    border: 10px;
+#reactJsYoutube{
+    box-shadow: var(--x) 0 var(--xB) var(--yB) rgb(78, 74, 106) !important;
+    border: 2px solid rgb(92, 107, 153) !important;
 }
-
-.js-b:focus,
-.js-b:active,
-.js-b:hover,
-.python-b:focus,
-.python-b:active,
-.python-b:hover {
-    border: 2px solid black !important;
+#reactJsYoutube:focus,
+#reactJsYoutube:active {
+    box-shadow: var(--x) 0 var(--xB) var(--yB) royalblue !important;
+    border: 2px solid royalblue !important;
+    background-color: rgb(92, 107, 153);
 }
-#javascriptYoutube:active{
+#jsYoutube:focus,
+#jsYoutube:active{
     /* .js-b:hover { */
     box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;
     background-color: rgb(255, 255, 0, .3);
     border: 10px;
 }
-.js-b:focus,
-.js-b:active{
-    /* .js-b:hover { */
-    box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;
-    background-color: rgb(255, 255, 0, .3);
-    border: 10px;
-}
-.js-b:hover {box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;}
+#jsYoutube:hover {box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;}
 
 .project {
     transition: background-color 0.25s linear, opacity 0.25s linear;
 }
 .project:focus,
 .project:active {
+    color: whitesmoke;
+    border: 1px solid black !important;
+    text-shadow: -1px 1px 3px black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 999;
+    font-size: 150%;
     outline: none;
     margin-top: 2px !important;
     margin-left: 2px !important;
@@ -87,4 +86,31 @@
     margin-left:1% !important;
     margin-bottom:1% !important;
     transition: all(500ms) !important;
+}
+
+#effect-indicator {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 8px 14px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+#efxChangeBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    /* opacity: 0; */
+    transition: opacity 0.3s ease;
 }
