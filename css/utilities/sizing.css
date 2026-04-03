@@ -6,3 +6,6 @@ a.drop-topic {
     width: 100%;
     height: 90%;
 }
+.project img {
+    min-height: 120px;
+}

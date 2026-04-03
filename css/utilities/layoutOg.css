@@ -3,7 +3,12 @@ header {
     display: flex;
     justify-content: space-between;
 }
-
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
 .topic>a.drop-topic,
 .drop-sub-topic {
     display: inline-flex;
@@ -36,6 +41,6 @@ header {
     flex-basis: 15%;
     flex-direction: column;
 }
-#youtubeResources>.topics-container .project {
+#youtubeResourcesSection>.topics-container .project {
     flex-basis: 20%;
 }

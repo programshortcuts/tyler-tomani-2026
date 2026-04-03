@@ -61,6 +61,12 @@
 .python-b:hover {
     border: 2px solid black !important;
 }
+#javascriptYoutube:active{
+    /* .js-b:hover { */
+    box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;
+    background-color: rgb(255, 255, 0, .3);
+    border: 10px;
+}
 .js-b:focus,
 .js-b:active{
     /* .js-b:hover { */

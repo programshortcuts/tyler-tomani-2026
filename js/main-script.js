@@ -1,6 +1,7 @@
 // main-script.js
 import { initDropDowns } from "./ui/drop-downs.js";
 import { initLetterNav } from "./nav/letter-nav.js";
+import { effectsLoops } from "./effects.js";
 const pageWrapper = document.querySelector('.page-wrapper')
 function initMain() {
     initDropDowns();
@@ -11,6 +12,7 @@ function initMain() {
         container: pageWrapper,   // or document.querySelector('.page-wrapper')
         selector: 'a'          // or '.project' to limit scope
     });
+    effectsLoops()
 }
 
 initMain();

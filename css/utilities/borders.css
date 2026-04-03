@@ -3,6 +3,9 @@ a.drop-topic {
     border-top: 1px solid black;
     border-left: 1px solid black;
 }
+.topics-container{
+    border: 1px white solid;
+}
 .topics-container>.project {
     border: 1px solid black;
 }
