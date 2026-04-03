@@ -8,6 +8,19 @@ let i = 0;
 let speed = 400;
 let j = 0;
 let direction = 1; // 1 = up, -1 = down
+function forceResume() {
+    isPaused = false;
+
+    // optional: re-pause shortly after if still focused/hovered
+    setTimeout(() => {
+        const active = document.activeElement;
+        const isStillInside = active?.closest('#youtubeResources');
+
+        if (isStillInside) {
+            isPaused = true;
+        }
+    }, 1200); // adjust timing to taste
+}
 export function effectsLoops(){
     const youtubeProjects = document.querySelectorAll('#youtubeResources .project')
     efxChangeBtn.addEventListener('click', e => {
@@ -28,6 +41,7 @@ export function effectsLoops(){
             } else {
                 choice = -1;
             }
+            forceResume()
             const labels = {
                 '-1': 'No Effect',
                 '0': 'Wave',
@@ -54,6 +68,11 @@ export function effectsLoops(){
 
     el.addEventListener('focus', () => {
         isPaused = true;
+        youtubeProjects.forEach(el => {
+            el.style.transform = 'scale(1)';
+            el.style.backgroundColor = '';
+            el.style.opacity = '';
+        });
     });
 
     el.addEventListener('blur', () => {
@@ -61,9 +80,6 @@ export function effectsLoops(){
     });
 });
 }
-
-
-
 function frameIncrements(youtubeProjects){
     if (isPaused) return;
     i += direction;
@@ -107,7 +123,6 @@ function frameIncrements(youtubeProjects){
 function spacingEfx(i,j,youtubeProjects){
     let margin = i;
 }
-
 function transformElsEfx(i,j,youtubeProjects){
     let sizeTransform = (1.03 / 100) * i + 1;
     youtubeProjects.forEach((el, index) => {
