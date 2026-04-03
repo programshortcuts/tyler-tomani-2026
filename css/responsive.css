@@ -1,5 +1,5 @@
 @media screen and (max-height: 520px){
-    /* *{background-color: blue !important;} */
+    *{background-color: blue !important;}
     .project img{
         max-height: 50px !important;
         max-width: 50px !important;

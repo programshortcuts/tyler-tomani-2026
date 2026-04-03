@@ -1,6 +1,7 @@
 // effects.js
 const efxChangeBtn = document.querySelector('#efxChangeBtn')
 let hoveredEl = null;
+let isPaused = false;
 let choice = -1
 let numChoices = 2
 let i = 0;
@@ -11,18 +12,22 @@ export function effectsLoops(){
     const youtubeProjects = document.querySelectorAll('#youtubeResources .project')
     efxChangeBtn.addEventListener('click', e => {
         console.log('here')
-        choice =  (choice + 1) % numChoices
+        if (choice < numChoices - 1) {
+            choice++;
+        } else {
+            choice = -1;
+        }
         
     })
     document.addEventListener('keydown',e => {
         const key = e.key.toLowerCase()
         if (e.metaKey && e.shiftKey && key === 'e') {
-            if (choice < numChoices) {
+            e.stopPropagation(); // 💥 stops other listeners from interfering   
+            if (choice < numChoices - 1) {
                 choice++;
             } else {
                 choice = -1;
             }
-
             const labels = {
                 '-1': 'No Effect',
                 '0': 'Wave',
@@ -30,8 +35,9 @@ export function effectsLoops(){
             };
 
             showIndicator(labels[choice]);
+            return; // 👉 exit early so nothing else runs
         }
-    });
+    }, true); // 👈 CAPTURE PHASE (this is the key)
     function animate() {
         frameIncrements(youtubeProjects)
         requestAnimationFrame(animate);
@@ -39,11 +45,19 @@ export function effectsLoops(){
     animate();
     youtubeProjects.forEach(el => {
     el.addEventListener('mouseenter', () => {
-        hoveredEl = el;
+        isPaused = true;
     });
 
     el.addEventListener('mouseleave', () => {
-        hoveredEl = null;
+        isPaused = true;
+    });
+
+    el.addEventListener('focus', () => {
+        isPaused = true;
+    });
+
+    el.addEventListener('blur', () => {
+        isPaused = false;
     });
 });
 }
@@ -51,6 +65,7 @@ export function effectsLoops(){
 
 
 function frameIncrements(youtubeProjects){
+    if (isPaused) return;
     i += direction;
         // hit top → start going down
     if (i  >= speed) {
@@ -107,7 +122,7 @@ function transformElsEfx(i,j,youtubeProjects){
 
 function waveStaggeredPulse(i, youtubeProjects) {
     youtubeProjects.forEach((el, index) => {
-                if (el === hoveredEl) return;
+        if (el === hoveredEl) return;
 
         const offset = index * 20; // spacing between waves
         let value = i - offset;

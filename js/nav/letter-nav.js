@@ -36,26 +36,39 @@ export function initLetterNav({
 
         if (!matches.length) return;
 
-        const active = document.activeElement;
-        const currentIndex = matches.indexOf(active);
-        const allIndex = allEls.indexOf(active);
+      const active = document.activeElement;
 
-        let nextEl;
+let orderedMatches = matches;
 
-        if (key !== lastLetterPressed || currentIndex === -1) {
-            // 🔥 if nothing is focused yet → always start at first match
-            nextEl = matches[0];
-        } else {
-            if (e.shiftKey) {
-                const i = (currentIndex - 1 + matches.length) % matches.length;
-                nextEl = matches[i];
-            } else {
-                const i = (currentIndex + 1) % matches.length;
-                nextEl = matches[i];
-            }
-        }
+if (active && active !== document.body) {
+    const parent = active.parentElement;
 
-        nextEl?.focus();
-        lastLetterPressed = key;
+    const localMatches = matches.filter(el => el.parentElement === parent);
+    const otherMatches = matches.filter(el => el.parentElement !== parent);
+
+    // 👉 KEY: local first, then global
+    if (localMatches.length) {
+        orderedMatches = [...localMatches, ...otherMatches];
+    }
+}
+
+const currentIndex = orderedMatches.indexOf(active);
+
+let nextEl;
+
+if (key !== lastLetterPressed || currentIndex === -1) {
+    nextEl = orderedMatches[0];
+} else {
+    if (e.shiftKey) {
+        const i = (currentIndex - 1 + orderedMatches.length) % orderedMatches.length;
+        nextEl = orderedMatches[i];
+    } else {
+        const i = (currentIndex + 1) % orderedMatches.length;
+        nextEl = orderedMatches[i];
+    }
+}
+
+nextEl?.focus();
+lastLetterPressed = key;
     });
 }
