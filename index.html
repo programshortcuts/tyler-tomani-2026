@@ -18,7 +18,9 @@
                 <div class="topic drop-parent">
                     <header>
 
-                        <a href="#" class="topic-title drop-down" ><h2>websites</h2></a>
+                        <button class="topic-title drop-down" aria-expanded="false">
+                            <span class="topic-title">websites</span>
+                        </button>
                     </header>
                     <div class="sub-topics-container downs">
                         <!-- program shortcuts -->
@@ -45,8 +47,12 @@
                 </div>
                 <!-- Projects -->
                 <div class="topic drop-parent">
-                    <a href="#" class="topic-title drop-down"><h2>projects</h2></a>
-                    <div class="sub-topics-container downs">
+                    <header>
+                        <button class="topic-title drop-down" aria-expanded="false">
+                            <span class="topic-title">projects</span>
+                        </button>
+                    </header>
+                    <div class="topics-container downs">
                         <!-- rel="noopener norefferer" is for SECURITY!! -->
                         <a class="project" target="_blank" 
                             href="" 
@@ -62,9 +68,10 @@
                 
                 <section id="youtubeResources" class="topic drop-parent">
                     <header>
-                        <a class="drop-down" id="youtube" href="#">
-                            <h2>youtube - resources</h2>
-                        </a>        
+                        
+                        <button class="topic-title drop-down" aria-expanded="false">
+                            <span class="topic-title">youtube - resources</span>
+                        </button>
                     </header>
                     <div class="topics-container downs">
                         <a id="dockerYoutube" class="project docker-b"
@@ -90,7 +97,7 @@
                             href="temp.html">
                             <h3 class="bgw">A.I. </h3>
                         </a>
-                        <a id="cssYoutube" class="project" class="css-b"
+                        <a id="cssYoutube" class="project" 
                             href="temp.html">
                             <h3>CSS</h3>
                             

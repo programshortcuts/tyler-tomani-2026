@@ -15,7 +15,9 @@ export function initLetterNav({
 
         // Ignore typing fields
         const tag = e.target.tagName;
-        if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+        if (
+            e.target.matches('input, textarea, [contenteditable="true"]')
+        ) return;
 
         if (e.metaKey || e.ctrlKey || e.altKey) return;
 
@@ -36,39 +38,47 @@ export function initLetterNav({
 
         if (!matches.length) return;
 
-      const active = document.activeElement;
+    const active = document.activeElement;
 
-let orderedMatches = matches;
+// Allow if nothing meaningful is focused yet
+    const isInitialState = active === document.body;
 
-if (active && active !== document.body) {
-    const parent = active.parentElement;
+// Allow if focus is inside container
+    const isInside = container.contains(active);
 
-    const localMatches = matches.filter(el => el.parentElement === parent);
-    const otherMatches = matches.filter(el => el.parentElement !== parent);
+    if (!isInitialState && !isInside) return;
 
-    // 👉 KEY: local first, then global
-    if (localMatches.length) {
-        orderedMatches = [...localMatches, ...otherMatches];
+    let orderedMatches = matches;
+
+    if (active && active !== document.body) {
+        const parent = active.parentElement;
+
+        const localMatches = matches.filter(el => el.parentElement === parent);
+        const otherMatches = matches.filter(el => el.parentElement !== parent);
+
+        // 👉 KEY: local first, then global
+        if (localMatches.length) {
+            orderedMatches = [...localMatches, ...otherMatches];
+        }
     }
-}
 
-const currentIndex = orderedMatches.indexOf(active);
+    const currentIndex = orderedMatches.indexOf(active);
 
-let nextEl;
+    let nextEl;
 
-if (key !== lastLetterPressed || currentIndex === -1) {
-    nextEl = orderedMatches[0];
-} else {
-    if (e.shiftKey) {
-        const i = (currentIndex - 1 + orderedMatches.length) % orderedMatches.length;
-        nextEl = orderedMatches[i];
+    if (key !== lastLetterPressed || currentIndex === -1) {
+        nextEl = orderedMatches[0];
     } else {
-        const i = (currentIndex + 1) % orderedMatches.length;
-        nextEl = orderedMatches[i];
+        if (e.shiftKey) {
+            const i = (currentIndex - 1 + orderedMatches.length) % orderedMatches.length;
+            nextEl = orderedMatches[i];
+        } else {
+            const i = (currentIndex + 1) % orderedMatches.length;
+            nextEl = orderedMatches[i];
+        }
     }
-}
 
-nextEl?.focus();
-lastLetterPressed = key;
+    nextEl?.focus();
+    lastLetterPressed = key;
     });
 }

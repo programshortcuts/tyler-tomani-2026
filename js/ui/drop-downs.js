@@ -1,3 +1,4 @@
+// drop-downs.js
 export function initDropDowns(){
     const dropDowns = document.querySelectorAll('.drop-down')
     dropDowns.forEach(el => {

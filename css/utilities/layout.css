@@ -1,4 +1,4 @@
-
+/* layout.css */
 header {
     display: flex;
     justify-content: space-between;
@@ -14,21 +14,22 @@ header {
     display: inline-flex;
 }
 
-.topics-container {
+.main-container > .topics-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
 }
 
 .topics-container>.sub-topic {
-    flex-basis: 50%;
-    display: flex;
-    flex-direction: column;
+    /* flex-basis: 50%; */
+    /* display: flex; */
+    /* flex-direction: column; */
 }
 
 .topic>.topics-container>.topic {
-    display: flex;
-    flex-basis: 49%;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-basis: 49%; */
+    /* flex-direction: column; */
 }
 .topics-container>.project {
     display: flex;
@@ -40,6 +41,10 @@ header {
     display: flex;
     flex-basis: 15%;
     flex-direction: column;
+}
+#youtubeResources>.topics-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 #youtubeResources>.topics-container .project {
     flex-basis: 20%;;

@@ -1,14 +1,16 @@
-@media screen and (max-height: 520px){
-    *{background-color: blue !important;}
+/* responsive.css */
+@media screen and (max-height: 1020px){
     .project img{
         max-height: 50px !important;
         max-width: 50px !important;
 
     }
+    .topics-container >  .project{
+        flex-basis: 30% !important;
+
+    }
     #youtubeResources>.topics-container .project {
-        /* height: 15vh !important; */
-        /* width:  20vw !important; */
-        height: 25vh !important;
-        width:  25vw !important;
+        height: 10vh ;   
+        width:  20vw ;
     }
 }
