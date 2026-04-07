@@ -27,9 +27,6 @@ a.drop-topic {
 .topic>.topics-container>.topic {
     margin: 1%;
 }
-.drop-sub-topic {
-    padding-left: 2.5%;
-}
 .sub-topic-container>.project {
     margin: 1.5% 1.5%;
     margin-left: 2.5%;
@@ -39,11 +36,9 @@ a.drop-topic {
     margin-top: 2.5%;
 }
 
-#youtubeResourcesSection>.topics-container .project {
-    height: 8vh;
+#youtubeResources>.topics-container .topic {
     padding-top: 1%;
-    padding-left: 1%;
-    
+    padding-left: 1%;    
 }
 #aiYoutube {
     padding-top: 2% !important;
