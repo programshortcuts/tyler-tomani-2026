@@ -1,7 +1,6 @@
 /* borders.css */
 .topics-container>.project {
     border: 1px solid black;
-    border: 1px solid magenta;
 }
 .drop-sub-topic {
     border-bottom: 1px solid black;

@@ -5,7 +5,8 @@ header {
 #homeH1 {
     text-decoration: none;
 }
-main>.topic a {
+.project a,
+.topic a {
     text-decoration: none;
 }
 header>.topics-container {
@@ -18,6 +19,11 @@ header>.topics-container {
 .topics-container > .topic{
     font-size: 1.2rem;
 }
-.topics-container > .project > .project-title{
+.projects-container  > .project > .project-title{
     font-size: 1.2rem;
+}
+.projects-container > .project > .project-title#codeCmdShrtTitle{
+    
+    font-size: 1.1rem;
+
 }

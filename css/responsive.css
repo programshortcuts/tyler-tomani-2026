@@ -20,4 +20,12 @@
         width:  20vw ;
         flex-basis: 20%;
     }
+    .projects-container {
+        flex-direction: column !important;
+    }
+    .projects-container > .project > .project-title#codeCmdShrtTitle{
+    
+        font-size: 1rem;
+
+    }
 }

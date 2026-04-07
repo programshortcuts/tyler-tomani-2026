@@ -13,29 +13,27 @@ main {
     /* padding-bottom: 20%; */
 }
 
-main>.topic {
-    margin: 1%;
+.main-container >.topics-container  {
+    margin-left: 0%;
 }
 a.drop-topic {
     padding: 0;
     padding-left: 2%;
 }
-.topics-container>.project {
+.projects-container>.project {
     margin: .5% .5%;
     
+}
+.projects-container>.project > .project-title{
+    margin-left: 2%;
 }
 .topic>.topics-container>.topic {
     margin: 1%;
 }
-.sub-topic-container>.project {
-    margin: 1.5% 1.5%;
-    margin-left: 2.5%;
-    padding-left: 2.5%;
-}
+/* youtube - resources */
 #youtubeResourcesSection>.topics-container {
     margin-top: 2.5%;
 }
-
 #youtubeResources>.topics-container .topic {
     padding-top: 1%;
     padding-left: 1%;    
