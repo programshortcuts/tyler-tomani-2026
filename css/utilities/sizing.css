@@ -13,13 +13,15 @@ button.drop-down > span.topic-title{
     height: inherit;
 }
 .project img {
-    max-height: 30px;
+    /* max-height: 30px; */
     width: 100%;
-    height: 90%;
-    max-width: 100px;
+    height: 100%;
+    /* max-width: 100px; */
+    min-width:  120px;
     min-height: 120px;
 }
 
 .topic#youtubeResources > .topics-container .topic {
     max-width: 400px;
+
 }

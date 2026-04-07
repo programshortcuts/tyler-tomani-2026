@@ -33,8 +33,12 @@
     
 }
 .projects-container > .project {
-    align-items: center;
+    /* align-items: center; */
     display: flex;
     flex-direction: column;
     flex-basis: 10vw;
+}
+.projects-container > .project > img{
+    align-self: center;
+    
 }

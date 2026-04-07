@@ -23,13 +23,7 @@ a.drop-topic {
     padding: 0;
     padding-left: 2%;
 }
-.projects-container>.project {
-    margin: .5% .5%;
-    
-}
-.projects-container>.project > .project-title{
-    margin-left: 2%;
-}
+
 .topic>.topics-container>.topic {
     margin: 1%;
 }
@@ -44,4 +38,12 @@ a.drop-topic {
 #aiYoutube {
     padding-top: 2% !important;
     padding-left: 2% !important;    
+}
+
+.projects-container>.project {
+    /* margin: .5% .5%; */
+    
+}
+.projects-container>.project > .project-title{
+    margin-left: 2%;
 }

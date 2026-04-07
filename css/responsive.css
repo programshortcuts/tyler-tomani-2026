@@ -1,6 +1,6 @@
 /* responsive.css */
-/* @media screen and (min-height: 860px){ */
-@media screen and (max-height: 1221px){
+/* @media screen and (min-width: 860px){ */
+@media screen and (max-width: 1221px){
     
     .project img{
         max-height: 50px !important;
@@ -17,18 +17,31 @@
         font-size: 1.1rem !important ;
         height: 10vh ;   
         width:  20vw ;
-        flex-basis: 20%;
+        flex-basis: 30%;
     }
     
-    .projects-container > .project > .project-title#codeCmdShrtTitle{
-    
-        font-size: 1rem;
+}
+@media screen and (min-width:1220px){
+    .projects-container>.project {
+        flex-basis: 15vw !important;
+    }
 
+    .projects-container > .project > .project-title#codeCmdShrtTitle{
+        font-size: 1rem;
     }
 }
-@media screen and (min-height:1220px){
-    /* *{background: blue !important;} */
+@media screen and (max-width: 854px) {
     .main-container {
-        padding-top: 25% !important;
+        padding-top: 20% !important;
+    }
+    .projects-container {
+        padding-top: 5%;
+    }
+    
+    .project-title {
+        font-size: 0.8rem !important;/* adjust to taste */
+    }
+    .project-img {
+        
     }
 }
