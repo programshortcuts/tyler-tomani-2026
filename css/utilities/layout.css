@@ -5,7 +5,6 @@ header {
 }
 .main-container > .topics-container {
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
 }
 .main-container > .topics-container > .topic {
@@ -18,14 +17,19 @@ header {
     flex-direction: column;
 }
 .topic#youtubeResources> {
-    /* flex-basis: 100%; */
-    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-grow: 1;
+    
 }
 .topic#youtubeResources>.topics-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .topic#youtubeResources > .topics-container .topic {
-    flex-basis: 20%;;
+    flex-basis: 30%;;
     gap: 10%;
+    height: 10vh;
 }

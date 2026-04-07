@@ -4,6 +4,10 @@
     --xB: 2px;
     --yB: 2px;
 }
+button.drop-down:active,
+button.drop-down:focus{
+    color: whitesmoke;
+}
 #aiYoutube:focus,
 #aiYoutube:active {
     box-shadow: var(--x) 0 var(--xB) var(--yB) orangered !important;

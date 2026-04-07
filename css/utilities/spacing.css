@@ -2,6 +2,9 @@
 body {
     margin: 0 1%;
 }
+button.drop-down {
+    padding: 1% 2%;
+}
 #aiToolsTopicsContainer{
     margin-left: 2%;
     width: 80%;
