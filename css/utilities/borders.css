@@ -1,14 +1,7 @@
 /* borders.css */
-
-.main-container{
-    /* border: 2px solid blue; */
-}
-.main-container > .topics-container{
-    /* border: 2px solid orange; */
-}
-
 .topics-container>.project {
     border: 1px solid black;
+    border: 1px solid magenta;
 }
 .drop-sub-topic {
     border-bottom: 1px solid black;

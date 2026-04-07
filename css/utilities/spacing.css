@@ -6,15 +6,11 @@ body {
     margin-top: 2%;
 }
 button.drop-down {
-    padding: 1% 2%;
-}
-#aiToolsTopicsContainer{
-    margin-left: 2%;
-    width: 80%;
+    /* padding: 1% 2%; */
 }
 main {
     margin: 1% 0;
-    padding-bottom: 20%;
+    /* padding-bottom: 20%; */
 }
 
 main>.topic {
@@ -24,11 +20,9 @@ a.drop-topic {
     padding: 0;
     padding-left: 2%;
 }
-.topics-container>.sub-topic {
-    margin: .5% 0;
-}
 .topics-container>.project {
-    margin: .5% .5%
+    margin: .5% .5%;
+    
 }
 .topic>.topics-container>.topic {
     margin: 1%;

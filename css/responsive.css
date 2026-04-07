@@ -1,5 +1,8 @@
 /* responsive.css */
 @media screen and (max-height: 1020px){
+    .main-container {
+        padding-top: 15%;
+    }
     .project img{
         max-height: 50px !important;
         max-width: 50px !important;
@@ -7,5 +10,14 @@
     }
     .topics-container >  .project > img {
         min-height: 100px;
+    }
+    .topics-container > .topic{
+        font-size: 1.6rem !important ;
+    }
+    #youtubeResources>.topics-container .topic {
+        font-size: 1.1rem !important ;
+        height: 10vh ;   
+        width:  20vw ;
+        flex-basis: 20%;
     }
 }

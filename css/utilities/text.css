@@ -15,6 +15,6 @@ header>.topics-container {
     font-size: 70%;
     text-decoration: none;
 }
-.drop-sub-topic {
-    text-decoration: underline;
+.topics-container > .topic{
+    font-size: 1.2rem;
 }

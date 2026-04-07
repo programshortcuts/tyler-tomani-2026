@@ -83,7 +83,7 @@ function frameIncrements(youtubeProjects){
     // debug
     if(choice === 0){
         // spacingEfx(i,j,youtubeProjects)
-        const speed = 400
+        const speed = 500
         incrementFrame(youtubeProjects,speed)
         waveStaggeredPulse({i,youtubeProjects,speed})
         return
@@ -140,9 +140,9 @@ function transformElsEfx({i,j,youtubeProjects}){
             el.style.transform = `scale(${sizeTransform})`;
             el.style.borderRadius = `${Math.floor(bRadius)}px`
             el.style.paddingLeft = `${Math.floor(bRadius * .9)}px`
+            el.style.paddingTop = `${Math.floor(bRadius * .2)}px`
         } else {
             el.style.transform = 'scale(1)';
-            el.style.paddingLeft = `${Math.floor(bRadius * .9)}px`
         }
     });
 }

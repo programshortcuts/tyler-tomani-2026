@@ -1,11 +1,7 @@
 /* layout.css */
 header {
-    display: flex;
-    justify-content: space-between;
-}
-.main-container{
     /* display: flex; */
-    /* flex-direction: column; */
+    /* justify-content: space-between; */
 }
 .main-container > .topics-container {
     display: flex;
@@ -16,12 +12,10 @@ header {
     display: flex;
     flex-direction: column;
 }
-
 .topics-container > .topic > .topics-container{
     display: flex;
 
 }
-
 .topics-container > .project {
     display: flex;
     flex-direction: column;
@@ -30,8 +24,12 @@ header {
 .topic#youtubeResources {
     flex-basis: 100%;
     flex-grow: 1;
-    
 }
+.topic#youtubeResources > header {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .topic#youtubeResources>.topics-container {
     display: flex;
     flex-wrap: wrap;
