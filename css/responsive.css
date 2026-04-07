@@ -1,8 +1,7 @@
 /* responsive.css */
-@media screen and (max-height: 1020px){
-    .main-container {
-        padding-top: 15%;
-    }
+/* @media screen and (min-height: 860px){ */
+@media screen and (max-height: 1221px){
+    
     .project img{
         max-height: 50px !important;
         max-width: 50px !important;
@@ -20,12 +19,16 @@
         width:  20vw ;
         flex-basis: 20%;
     }
-    .projects-container {
-        /* flex-direction: column !important; */
-    }
+    
     .projects-container > .project > .project-title#codeCmdShrtTitle{
     
         font-size: 1rem;
 
+    }
+}
+@media screen and (min-height:1220px){
+    /* *{background: blue !important;} */
+    .main-container {
+        padding-top: 25% !important;
     }
 }
