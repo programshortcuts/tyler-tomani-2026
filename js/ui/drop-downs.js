@@ -1,6 +1,7 @@
 // drop-downs.js
 export function initDropDowns(){
     const dropDowns = document.querySelectorAll('.drop-down')
+    hideAllDowns()
     dropDowns.forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault()

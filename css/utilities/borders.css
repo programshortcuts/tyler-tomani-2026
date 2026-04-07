@@ -1,7 +1,10 @@
 /* borders.css */
-a.drop-topic {
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+
+.main-container{
+    /* border: 2px solid blue; */
+}
+.main-container > .topics-container{
+    /* border: 2px solid orange; */
 }
 
 .topics-container>.project {

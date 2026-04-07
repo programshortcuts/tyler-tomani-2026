@@ -3,22 +3,30 @@ header {
     display: flex;
     justify-content: space-between;
 }
+.main-container{
+    /* display: flex; */
+    /* flex-direction: column; */
+}
 .main-container > .topics-container {
     display: flex;
     flex-wrap: wrap;
 }
 .main-container > .topics-container > .topic {
+    flex-basis: 49.5%;
     display: flex;
     flex-direction: column;
+}
+.topics-container > .topic > .topics-container{
+    display: flex;
+
 }
 
-.topics-container >.project {
+.topics-container > .project {
     display: flex;
     flex-direction: column;
+    flex-basis: 10vw;
 }
-.topic#youtubeResources> {
-    display: flex;
-    flex-direction: column;
+.topic#youtubeResources {
     flex-basis: 100%;
     flex-grow: 1;
     
@@ -26,7 +34,6 @@ header {
 .topic#youtubeResources>.topics-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 .topic#youtubeResources > .topics-container .topic {
     flex-basis: 30%;;

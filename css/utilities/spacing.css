@@ -2,6 +2,9 @@
 body {
     margin: 0 1%;
 }
+.main-container > .topics-container > .topic{
+    margin-top: 2%;
+}
 button.drop-down {
     padding: 1% 2%;
 }

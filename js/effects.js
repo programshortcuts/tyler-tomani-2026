@@ -5,7 +5,7 @@ let isPaused = false;
 let choice = -1
 let numChoices = 2
 let i = 0;
-let speed = 400;
+// let speed = 400;
 let j = 0;
 let direction = 1; // 1 = up, -1 = down
 function forceResume() {
@@ -80,31 +80,19 @@ export function effectsLoops(){
 });
 }
 function frameIncrements(youtubeProjects){
-    if (isPaused) return;
-    i += direction;
-        // hit top → start going down
-    if (i  >= speed) {
-        i = speed;       // clamp
-        direction = -1;
-    }
-    // hit bottom → start going up + increment j
-    if (i <= 0) {
-        i = 0;         // clamp
-        direction = 1;
-        if(j < youtubeProjects.length - 1){
-            j++;
-        } else {
-            j = 0;
-        }
-    }
     // debug
     if(choice === 0){
-        waveStaggeredPulse(i,youtubeProjects)
         // spacingEfx(i,j,youtubeProjects)
+        const speed = 400
+        incrementFrame(youtubeProjects,speed)
+        waveStaggeredPulse({i,youtubeProjects,speed})
         return
     }
     if(choice === 1){
-        transformElsEfx(i,j,youtubeProjects)
+        let speed = 50
+        incrementFrame(youtubeProjects,speed)
+        transformElsEfx({i,j,youtubeProjects,speed})
+        waveStaggeredPulse({i,youtubeProjects,speed : 200})
         return
         
     }
@@ -118,10 +106,31 @@ function frameIncrements(youtubeProjects){
     }
     
 }
+function incrementFrame(youtubeProjects,speed){
+    if (isPaused) return;
+
+    i += direction;
+        // hit top → start going down
+    if (i  >= speed) {
+        i = speed;       // clamp
+        direction = -1;
+    }
+    // hit bottom → start going up + increment j
+    if (i <= 0) {
+        i = 0;         // clamp
+        direction = 1;
+        
+        if(j < youtubeProjects.length - 1){
+            j++;
+        } else {
+            j = 0;
+        }
+    }
+}
 function spacingEfx(i,j,youtubeProjects){
     let margin = i;
 }
-function transformElsEfx(i,j,youtubeProjects){
+function transformElsEfx({i,j,youtubeProjects,speed}){
     let sizeTransform = (1.03 / 100) * i + 1;
     youtubeProjects.forEach((el, index) => {
         if (index === j) {
@@ -133,7 +142,7 @@ function transformElsEfx(i,j,youtubeProjects){
 }
 
 
-function waveStaggeredPulse(i, youtubeProjects) {
+function waveStaggeredPulse({i, youtubeProjects,speed}) {
     youtubeProjects.forEach((el, index) => {
         if (el === hoveredEl) return;
 
@@ -158,6 +167,9 @@ function applyEffect(el, opacity) {
     // base opacity
     const minOpactiy = .5
     el.style.opacity = 0.5 + opacity * 0.5;
+    el.style.borderRadius = `${Math.floor(opacity * 20)}`
+    console.log(Math.floor(opacity * 20))
+    // el.style.opacity = 0.5 + opacity * 0.5;
     // detect type via id
     if (el.id === 'aiYoutube') {
         el.style.backgroundColor = `rgba(255, 69, 0, ${opacity * minOpactiy})`;
