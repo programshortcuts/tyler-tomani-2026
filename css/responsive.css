@@ -29,6 +29,12 @@
     .projects-container > .project > .project-title#codeCmdShrtTitle{
         font-size: 1rem;
     }
+    .project > img {
+        max-height: 30px;
+        max-width: 50px;
+        min-height: 30px;
+        min-width: 100px;
+    }
 }
 @media screen and (max-width: 854px) {
     .main-container {
@@ -41,7 +47,16 @@
     .project-title {
         font-size: 0.8rem !important;/* adjust to taste */
     }
-    .project-img {
-        
+    #projectsSection  > .projects-container > 
+    .project {
+        margin: 1%;
     }
+    #projectsSection  > .projects-container > 
+    .project > img {
+        max-height: 30px !important;
+        max-width:  100px !important;
+        min-width:  5px !important;
+        /* min-height: 30px !important; */
+    }
+    
 }

@@ -12,11 +12,11 @@ button.drop-down > span.topic-title{
     width: 100%;   
     height: inherit;
 }
-.project img {
-    /* max-height: 30px; */
+.project > img {
+    max-height: 30px;
+    max-width: 200px;
     width: 100%;
     height: 100%;
-    /* max-width: 100px; */
     min-width:  120px;
     min-height: 120px;
 }

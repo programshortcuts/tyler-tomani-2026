@@ -9,6 +9,7 @@ export function initLetterNav({
     }
 
     let lastLetterPressed = null;
+    
 
     document.addEventListener('keydown', (e) => {
 
@@ -50,18 +51,29 @@ export function initLetterNav({
         let orderedMatches = matches;
 
 // ✅ ONLY prioritize local on first press
-const isNewKey = key !== lastLetterPressed;
+        const isNewKey = key !== lastLetterPressed;
 
-if (isNewKey && active && active !== document.body) {
-    const parent = active.parentElement;
+// ✅ SPECIAL CASE:
+// Only when switching FROM a different letter → TO this one
+        if (isNewKey && active && active !== document.body) {
+            const currentIndexInAll = allEls.indexOf(active);
 
-    const localMatches = matches.filter(el => el.parentElement === parent);
-    const otherMatches = matches.filter(el => el.parentElement !== parent);
+            if (currentIndexInAll > 0) {
+                const prevEl = allEls[currentIndexInAll - 1];
 
-    if (localMatches.length) {
-        orderedMatches = [...localMatches, ...otherMatches];
-    }
-}
+                const prevElStartsWithKey = prevEl.textContent
+                    .trim()
+                    .toLowerCase()
+                    .startsWith(key);
+
+                if (prevElStartsWithKey) {
+                    prevEl.focus();
+                    prevLetterPressed = lastLetterPressed;
+                    lastLetterPressed = key;
+                    return; // 🚨 STOP here (skip normal logic)
+                }
+            }
+        }
 
         const currentIndex = orderedMatches.indexOf(active);
 
