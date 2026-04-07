@@ -3,14 +3,10 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.main-container {
-}
-
 .main-container > .topics-container {
     display: flex;
     /* flex-direction: column; */
     flex-wrap: wrap;
-    /* flex-wrap: wrap; */
 }
 .main-container > .topics-container > .topic {
     display: flex;
@@ -20,6 +16,10 @@ header {
 .topics-container >.project {
     display: flex;
     flex-direction: column;
+}
+.topic#youtubeResources> {
+    /* flex-basis: 100%; */
+    /* flex-grow: 1; */
 }
 .topic#youtubeResources>.topics-container {
     display: flex;

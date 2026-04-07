@@ -1,3 +1,4 @@
+/* sizing.css */
 button.drop-down {
     border: 1px solid blue;
     font-size: 1.5rem;
@@ -14,7 +15,7 @@ button.drop-down > span.topic-title{
     height: 90%;
 }
 .project img {
-    min-height: 150px;
+    min-height: 120px;
 }
 #youtubeResources>.topics-container .project {
     height: 16vh ;   
