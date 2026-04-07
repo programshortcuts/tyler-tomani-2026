@@ -167,7 +167,7 @@ function applyEffect(el, opacity) {
     // base opacity
     const minOpactiy = .5
     el.style.opacity = 0.5 + opacity * 0.5;
-    el.style.borderRadius = `${Math.floor(opacity * 20)}`
+    el.style.borderRadius = `${Math.floor(opacity * 20)}px`
     console.log(Math.floor(opacity * 20))
     // el.style.opacity = 0.5 + opacity * 0.5;
     // detect type via id
