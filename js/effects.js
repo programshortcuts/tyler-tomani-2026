@@ -89,9 +89,9 @@ function frameIncrements(youtubeProjects){
         return
     }
     if(choice === 1){
-        let speed = 50
+        let speed = 80
         incrementFrame(youtubeProjects,speed)
-        transformElsEfx({i,j,youtubeProjects,speed})
+        transformElsEfx({i,j,youtubeProjects})
         waveStaggeredPulse({i,youtubeProjects,speed : 200})
         return
         
@@ -101,6 +101,7 @@ function frameIncrements(youtubeProjects){
             el.style.transform = 'scale(1)';
             el.style.backgroundColor = '';
             el.style.opacity = '';
+            el.style.borderRadius = '0'
         });
         return;
     }
@@ -130,18 +131,21 @@ function incrementFrame(youtubeProjects,speed){
 function spacingEfx(i,j,youtubeProjects){
     let margin = i;
 }
-function transformElsEfx({i,j,youtubeProjects,speed}){
+function transformElsEfx({i,j,youtubeProjects}){
     let sizeTransform = (1.03 / 100) * i + 1;
+    let bRadius = i 
+    console.log(bRadius)
     youtubeProjects.forEach((el, index) => {
         if (index === j) {
             el.style.transform = `scale(${sizeTransform})`;
+            el.style.borderRadius = `${Math.floor(bRadius)}px`
+            el.style.paddingLeft = `${Math.floor(bRadius * .9)}px`
         } else {
             el.style.transform = 'scale(1)';
+            el.style.paddingLeft = `${Math.floor(bRadius * .9)}px`
         }
     });
 }
-
-
 function waveStaggeredPulse({i, youtubeProjects,speed}) {
     youtubeProjects.forEach((el, index) => {
         if (el === hoveredEl) return;
@@ -167,8 +171,7 @@ function applyEffect(el, opacity) {
     // base opacity
     const minOpactiy = .5
     el.style.opacity = 0.5 + opacity * 0.5;
-    el.style.borderRadius = `${Math.floor(opacity * 20)}px`
-    console.log(Math.floor(opacity * 20))
+    
     // el.style.opacity = 0.5 + opacity * 0.5;
     // detect type via id
     if (el.id === 'aiYoutube') {
