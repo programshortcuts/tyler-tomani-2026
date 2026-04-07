@@ -12,12 +12,12 @@ a.drop-topic {
     border-top: 1px solid black;
     border-left: 1px solid black;
 }
-.js-b{border: 2px solid darkkhaki !important;}
-.docker-b{border: 2px solid darkslateblue !important;}
-.freecodecamp-b{border: 2px solid green !important;}
-.nodeJs-b { border: 2px solid royalblue !important;}
-.dark-mode .nodeJs-b { border: 2px solid royalblue !important;}
-.python-b {border: 2px solid mediumpurple !important;}
+#jsYoutube{border: 2px solid darkkhaki !important;}
+#dockerYoutube{border: 2px solid darkslateblue !important;}
+#freecodecampYoutube{border: 2px solid green !important;}
+#nodeJsYoutube { border: 2px solid royalblue !important;}
+.dark-mode #nodeJsYoutube { border: 2px solid royalblue !important;}
+#pythonYoutube {border: 2px solid mediumpurple !important;}
 
 #aiYoutube{
     border: 1px solid orangered;

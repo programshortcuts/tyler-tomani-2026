@@ -1,7 +1,7 @@
 // letter-nav.js
 export function initLetterNav({
     container = document,
-    selector = 'a'
+    selector = 'a,button'
 } = {}) {
 
     if (!container) {
@@ -12,7 +12,7 @@ export function initLetterNav({
     let lastLetterPressed = null;
 
     document.addEventListener('keydown', (e) => {
-
+        
         // Ignore typing fields
         const tag = e.target.tagName;
         if (

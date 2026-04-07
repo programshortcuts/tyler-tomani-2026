@@ -1,6 +1,13 @@
 body {
     background-color: whitesmoke;
 }
+button.drop-down {
+    background-color: inherit;
+    color: white;
+}
+button.drop-down > span.topic-title{
+    
+}
 main>.topic a {
     color: rgb(72, 70, 65);
 }

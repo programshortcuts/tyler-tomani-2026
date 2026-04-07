@@ -64,11 +64,11 @@
 }
 #jsYoutube:hover {box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;}
 
-.project {
+.topic {
     transition: background-color 0.25s linear, opacity 0.25s linear;
 }
-.project:focus,
-.project:active {
+.topic:focus,
+.topic:active {
     color: whitesmoke;
     border: 1px solid black !important;
     text-shadow: -1px 1px 3px black;
@@ -80,7 +80,7 @@
     margin-left: 2px !important;
     transition: all .2s;   
 }
-.project:hover{
+.topic:hover{
     padding-top: 1% !important;
     padding-left: 1% !important;
     margin-left:1% !important;

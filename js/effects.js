@@ -22,9 +22,8 @@ function forceResume() {
     }, 1200); // adjust timing to taste
 }
 export function effectsLoops(){
-    const youtubeProjects = document.querySelectorAll('#youtubeResources .project')
+    const youtubeProjects = document.querySelectorAll('#youtubeResources .topic')
     efxChangeBtn.addEventListener('click', e => {
-        console.log('here')
         if (choice < numChoices - 1) {
             choice++;
         } else {
@@ -99,7 +98,6 @@ function frameIncrements(youtubeProjects){
         }
     }
     // debug
-    console.log(choice)
     if(choice === 0){
         waveStaggeredPulse(i,youtubeProjects)
         // spacingEfx(i,j,youtubeProjects)

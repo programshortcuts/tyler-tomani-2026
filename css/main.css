@@ -5,6 +5,7 @@
 /* uis */
 @import url('ui/drop-downs.css');
 /* utilties */
+@import url('utilities/colors.css');
 @import url('utilities/borders.css');
 @import url('utilities/display.css');
 @import url('utilities/effects.css');

@@ -9,7 +9,7 @@
         flex-basis: 30% !important;
 
     }
-    #youtubeResources>.topics-container .project {
+    #youtubeResources>.topics-container .topic {
         height: 10vh ;   
         width:  20vw ;
     }
