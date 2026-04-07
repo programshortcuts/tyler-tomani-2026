@@ -21,7 +21,7 @@
         flex-basis: 20%;
     }
     .projects-container {
-        flex-direction: column !important;
+        /* flex-direction: column !important; */
     }
     .projects-container > .project > .project-title#codeCmdShrtTitle{
     
