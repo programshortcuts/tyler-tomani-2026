@@ -69,27 +69,25 @@ button.drop-down:focus{
 #jsYoutube:hover {box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;}
 
 .topic {
-    transition: background-color 0.25s linear, opacity 0.25s linear;
+    /* transition: background-color 0.25s linear, opacity 0.25s linear; */
 }
-.topic:focus,
-.topic:active {
+.topic-title:focus,
+.topic-title:active {
     color: whitesmoke;
-    border: 1px solid black !important;
-    text-shadow: -1px 1px 3px black;
+    /* border: 1px solid black !important; */
+    /* text-shadow: -1px 1px 3px black; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 999;
-    font-size: 150%;
-    outline: none;
+    /* font-weight: 999; */
+    /* font-size: 150%; */
+    /* padding: 20%; */
+    /* outline: none; */
     margin-top: 2px !important;
     margin-left: 2px !important;
+        padding-top: 1% !important;
+        padding-left: 1% !important;
+        margin-left:1% !important;
+        margin-bottom:1% !important;
     transition: all .2s;   
-}
-.topic:hover{
-    padding-top: 1% !important;
-    padding-left: 1% !important;
-    margin-left:1% !important;
-    margin-bottom:1% !important;
-    transition: all(500ms) !important;
 }
 
 #effect-indicator {

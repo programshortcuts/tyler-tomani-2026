@@ -15,12 +15,11 @@ button.drop-down > span.topic-title{
 .topic-title {
     font-size: 1.4rem ;
 }
-.project>img {
-    max-height: 200px ;
-    max-width:  200px ;
-}
-
 .topic#youtubeResources >.topics-container .topic {
     max-width: 400px;
 
+}
+.project>img {
+    max-height: 100px;
+    max-width: 200px;
 }
