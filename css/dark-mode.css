@@ -1,0 +1,80 @@
+:root {
+    --bg-primary: #201d1d;
+    --font-primary: whitesmoke;
+}
+
+.dark-mode {
+    background-color: var(--bg-primary);
+    color: var(--font-primary)
+}
+.dark-mode #homeH1 {
+    color: whitesmoke !important;
+}
+.dark-mode .drop-topic,
+.dark-mode .drop-sub-topic{
+    border: 1px solid var(--font-primary);
+    border-bottom: none;
+    border-right: none;
+}
+
+.dark-mode h2,
+.dark-mode h3{
+    color: var(--font-primary) !important;
+
+}
+.dark-mode nav#nav-section-lesson-titles {
+    background-color: var(--bg-primary)
+}
+
+.dark-mode pre,
+.dark-mode textarea{
+    color: white;
+}
+.dark-mode a {
+    color: white;
+}
+
+.dark-mode,
+h4 .dark-mode p {
+    color: whitesmoke;
+}
+
+.dark-mode #nav-section-lesson-titles {
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+
+}
+
+.dark-mode main>aside {
+    border-right: 1px solid whitesmoke;
+}
+.dark-mode .main-links a{
+    border: 1px solid whitesmoke;
+
+}
+.dark-mode .version {
+    border: 1px solid whitesmoke;
+    color: white;
+}
+.dark-mode button:focus,
+.dark-mode button:active,
+.dark-mode a:focus,
+.dark-mode a:active {
+    color: black;
+    border: 2px solid white;
+}
+
+
+.dark-mode .ai-b:focus h3,
+.dark-mode .ai-b:active h3,
+.dark-mode .js-b:focus h3,
+.dark-mode .js-b:active h3,
+.dark-mode .python-b:focus h3,
+.dark-mode .python-b:active h3 {
+    text-shadow: -2px 1px black;
+    color: whitesmoke !important;
+}
+.dark-mode .python-b:focus,
+.python-b:active {
+    background-color: rgb(147, 112, 216);
+}

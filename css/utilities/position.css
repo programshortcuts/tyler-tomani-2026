@@ -1,0 +1,8 @@
+/* position.css */
+.btn-container {
+    position: absolute;
+    z-index: 2;
+    /* top: 76%; */
+    bottom: 10%;
+    left: 0;
+}
