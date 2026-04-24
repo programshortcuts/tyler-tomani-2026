@@ -32,15 +32,12 @@
     
 }
 .projects-container > .project {
-    position: relative;
     justify-content: center;
     display: flex;
     flex-direction: column;
     flex-basis: 10vw;
 }
-.project >.project-title{
-    /* position: absolute; */
-}
+
 .projects-container > .project > img{
     align-self: center;
     

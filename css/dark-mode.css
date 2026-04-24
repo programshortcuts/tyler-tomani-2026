@@ -3,9 +3,7 @@
     --font-primary: whitesmoke;
 }
 
-.dark-mode .topic h3 {
-    color: var(--font-primary) !important;
-}
+
 .dark-mode {
     background-color: var(--bg-primary);
     /* color: var(--font-primary) */
@@ -23,7 +21,11 @@
     background-color: var(--bg-primary)
 }
 
-
+.dark-mode .topic-title,
+.dark-mode h3 {
+    color: var(--font-primary) !important;
+}
 .dark-mode .project-title {
-    color: black !important;
+    color: rgb(74, 77, 79) !important;
+    /* text-shadow: 1px 1px 0px white; */
 }
