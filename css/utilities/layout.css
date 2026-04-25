@@ -8,8 +8,7 @@
     display: flex;
     flex-direction: column;
 }
-
-/* youtube - resources */
+/* Topics */
 .topic#youtubeResources {
     flex-basis: 100%;
     flex-grow: 1;
@@ -27,9 +26,11 @@
     gap: 10%;
     height: 10vh;
 }
+
+
+/* Projects */
 .projects-container {
-    display: flex;
-    
+    display: flex;   
 }
 .projects-container > .project {
     justify-content: center;
@@ -37,8 +38,6 @@
     flex-direction: column;
     flex-basis: 10vw;
 }
-
 .projects-container > .project > img{
     align-self: center;
-    
 }

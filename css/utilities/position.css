@@ -2,11 +2,9 @@
 .btn-container {
     position: absolute;
     z-index: 2;
-    /* top: 76%; */
     bottom: 10%;
     left: 0;
 }
-
 .projects-container>.project {
     position: relative;
     justify-content: center;
@@ -14,8 +12,7 @@
     flex-direction: column;
     flex-basis: 10vw;
 }
-
 .project>.project-title {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
 }
