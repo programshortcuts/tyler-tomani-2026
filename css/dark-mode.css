@@ -1,6 +1,7 @@
 :root {
     --bg-primary: #201d1d;
     --font-primary: whitesmoke;
+    --clr-titles: whitesmoke;
 }
 
 
@@ -26,6 +27,6 @@
     color: var(--font-primary) !important;
 }
 .dark-mode .project-title {
-    color: rgb(74, 77, 79) !important;
+    color: var(--clr-titles) !important;
     /* text-shadow: 1px 1px 0px white; */
 }
