@@ -2,7 +2,7 @@
 const efxChangeBtn = document.querySelector('#efxChangeBtn')
 let hoveredEl = null;
 let isPaused = false;
-let choice = -1
+let choice = 0
 let numChoices = 2
 let i = 0;
 // let speed = 400;
