@@ -19,7 +19,7 @@ function forceResume() {
         if (isStillInside) {
             isPaused = true;
         }
-    }, 1200); // adjust timing to taste
+    }, 500); // adjust timing to taste
 }
 export function effectsLoops(){
     const youtubeProjects = document.querySelectorAll('#youtubeResources .topic')
@@ -169,8 +169,8 @@ function waveStaggeredPulse({i, youtubeProjects,speed}) {
 }
 function applyEffect(el, opacity) {
     // base opacity
-    const minOpactiy = .5
-    el.style.opacity = 0.5 + opacity * 0.5;
+    const minOpactiy = .4
+    el.style.opacity = 0.6 + opacity * 0.5;
     
     // el.style.opacity = 0.5 + opacity * 0.5;
     // detect type via id
@@ -190,6 +190,9 @@ function applyEffect(el, opacity) {
         el.style.backgroundColor = ` rgb(31, 81, 31, ${opacity * minOpactiy})`;
     }
     if (el.id === 'nodeJsYoutube') {
+            el.style.backgroundColor = `rgb(32, 55, 122, ${opacity * minOpactiy})`;
+    }
+    if (el.id === 'arduinoYoutube') {
             el.style.backgroundColor = `rgb(32, 55, 122, ${opacity * minOpactiy})`;
     }
     if (el.id === 'pythonYoutube') {

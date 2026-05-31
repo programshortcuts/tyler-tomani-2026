@@ -1,4 +1,7 @@
 /* sizing.css */
+.page-header h2 {
+    font-size: 90%;
+}
 .main-container {
     width: 100vw;
 }

@@ -11,7 +11,7 @@ button.drop-down:focus{
 #aiYoutube:focus,
 #aiYoutube:active {
     box-shadow: var(--x) 0 var(--xB) var(--yB) orangered !important;
-    background-color: rgb(255, 69, 0,.4);
+    background-color: rgb(255, 69, 0,.4) !important;
 }
 #cssYoutube{
     box-shadow: var(--x) 0 var(--xB) var(--yB) rgb(78, 74, 106) !important;
@@ -63,8 +63,9 @@ button.drop-down:focus{
 #jsYoutube:active{
     /* .js-b:hover { */
     box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;
-    background-color: rgb(255, 255, 0, .3);
+    background-color: rgb(255, 255, 0, .3) !important;
     border: 10px;
+    opacity: 100 !important;
 }
 #jsYoutube:hover {box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;}
 
@@ -74,13 +75,7 @@ button.drop-down:focus{
 .topic-title:focus,
 .topic-title:active {
     color: whitesmoke;
-    /* border: 1px solid black !important; */
-    /* text-shadow: -1px 1px 3px black; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* font-weight: 999; */
-    /* font-size: 150%; */
-    /* padding: 20%; */
-    /* outline: none; */
     margin-top: 2px !important;
     margin-left: 2px !important;
         padding-top: 1% !important;
@@ -115,4 +110,17 @@ button.drop-down:focus{
     border-radius: 8px;
     /* opacity: 0; */
     transition: opacity 0.3s ease;
+}
+
+#arduinoYoutube{
+
+    /* box-shadow: var(--x) 0 var(--xB) var(--yB) royalblue !important; */
+    border: 2px solid royalblue ;
+    background-color: rgb(32, 55, 122);
+}
+#arduinoYoutube:focus,
+#arduinoYoutube:active {
+    box-shadow: var(--x) 0 var(--xB) var(--yB) royalblue !important;
+    border: 2px solid royalblue !important;
+    background-color: rgb(32, 55, 122) !important;
 }
