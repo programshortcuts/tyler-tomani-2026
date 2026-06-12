@@ -9,8 +9,6 @@ export function initLetterNav({
     }
 
     let lastLetterPressed = null;
-    
-
     document.addEventListener('keydown', (e) => {
 
         // Ignore typing fields
