@@ -42,7 +42,7 @@ button.drop-down:focus{
 }
 #pythonYoutube:focus,
 #pythonYoutube:active {
-    background-color: rgb(147, 112, 216, .4);
+    background-color: rgb(147, 112, 216, .4) !important;
     border: 10px;
     font-size: 1.3rem;
 }
@@ -61,7 +61,6 @@ button.drop-down:focus{
 }
 #jsYoutube:focus,
 #jsYoutube:active{
-    /* .js-b:hover { */
     box-shadow: var(--x) 0 var(--xB) var(--yB) yellow !important;
     background-color: rgb(255, 255, 0, .3) !important;
     border: 10px;
